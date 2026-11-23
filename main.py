@@ -179,6 +179,7 @@ class Visualizer:
             writer = open('output.txt', 'a')
             writer.write(direction + ' ')
             writer.close()
+        print(self.cube.get_cube())
 
     # randomly scrambles cube
     def scramble(self):
@@ -186,7 +187,9 @@ class Visualizer:
         for i in range(25):
             move = random.randint(0, 11)
             scrambled.append(MOVES[move])
-        self.cube.add_moves(scrambled)
+        #self.cube.add_moves(scrambled)
+        print('Scrambled: ' + ' '.join(scrambled))
+        print(self.cube.get_cube())
 
     # loads input from input.txt and reads allowed moves
     def read_input(self):

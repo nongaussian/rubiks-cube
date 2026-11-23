@@ -25,6 +25,12 @@ class Piece:
         self.len = 0.5
         self.position = np.identity(3, int)
 
+    def __repr__(self):
+        return f"Piece({self.x}, {self.y}, {self.z})"
+    
+    def __str__(self):
+        return f"({self.x}, {self.y}, {self.z})"
+
     # multiplies current position by a rotation matrix to move and rotate the
     # piece
     def rotate_x(self, direction):
